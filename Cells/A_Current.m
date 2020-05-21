@@ -24,7 +24,7 @@ ylabel('taoh (ms)'), xlabel('V (mV)') %'\tao_{h} (ms)'
 taob = 15; taon = 0.5; nss = mss; % time constant [ms]
 gNa = 30; gK = 7; gleak = 1; gA = 16; % [mS/cm^2]
 VNa = 45; VK = -90; Vleak = -70; %[mV]
-C = 1.5; %[µF/cm2]
+C = 1.5; %[ÂµF/cm2]
 
 % model parameters
 I0 = 24; t0 = 5; t1 = 7; % current injection [muA/cm^2] [ms]
