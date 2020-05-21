@@ -14,11 +14,11 @@ res = 1/gleak*10.^-3; % scaled to MOhms (originally 1/mS = 1000 Ohms)
 % membrane time constant (ms)
 tao = C./gleak;
 ```
-Surface Area: 1.2566e-05 cm2  
-Capacitance: 1.2566e-05 µF  
-Membrane conductance: 3.7699e-06  
-Resistance: 265.2582 MOhms  
-Tao: 3.3333 ms  
+* Surface Area: 1.2566e-05 cm2  
+* Capacitance: 1.2566e-05 µF  
+* Membrane conductance: 3.7699e-06  
+* Resistance: 265.2582 MOhms  
+* Tao: 3.3333 ms  
 
 Simulation parameters:
 ```
