@@ -62,5 +62,5 @@ axis([ti tf -10 Inf]), xlabel('t (ms)'), ylabel('I (pA)')
 legend({'Ileak (resistive)','IC (capacitive)'})
 
 !git add Passive_Cell_Model.m
-!git commit -m "Passive_Cell_Model"
+!git commit -m "Model of isopotential cell."
 !git push
