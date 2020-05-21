@@ -2,7 +2,7 @@
 Date uploaded: 5/21/20
 
 Initialize cellular properties:
-```
+```Matlab
 % radius [µm], surface area [cm^2]
 r = 10; sa = (r*0.0001).^2*4*pi; 
 % approximation of capacitance of biological membranes [ÂµF/cm2], capacitance [µF]
@@ -21,14 +21,14 @@ tao = C./gleak;
 * Tao: 3.3333 ms  
 
 Simulation parameters:
-```
+```Matlab
 I0 = 10; % injected current [pA]
 t0 = 2; t1 = 22; % duration of injection [ms]
 ti = 0; tf = 40; % total time frame
 Eleak = -68; % resting potential of cell [mV]
 ```
 ### Analytical Solution
-```
+```Matlab
 syms t
 assume (t>ti & t<tf) % Note: I0 pA scaled to muA
 % exact solution to passive cell differential equation 
@@ -40,14 +40,14 @@ figure, fplot(V,'Linewidth',1)
 ```
 
 ### Numerical Solution
-```
+```Matlab
 % set time steps and initial conditions
 dt = 0.01; t = ti:dt:tf; n = length(t); % [ms]
 Vfe = zeros(1,n); Iel = zeros(1,n); 
 Vfe(1) = Eleak; Iel(t0/dt+1:t1/dt+1) = I0*10.^(-6); % [muA]
 ```
 Forward Euler Approximation
-```
+```Matlab
 for i = 1:n-1
     Vfe(i+1) = Vfe(i)+(-gleak.*(Vfe(i)-Eleak)+Iel(i)).*dt./C;
 end
@@ -59,7 +59,7 @@ legend({'V (analytic)','V (numeric)'})
 ![Fig1](https://github.com/jlfchen/ML-Algorithms/blob/master/Cells/html/1-1.png)
 
 ### Capacitance and Resistive Currents
-```
+```Matlab
 Ileak = 10^6.*gleak.*(V-Eleak); % leak (resistive) current
 figure, fplot(Ileak,'Linewidth',1)
 
