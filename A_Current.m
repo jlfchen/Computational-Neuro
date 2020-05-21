@@ -80,5 +80,5 @@ hold on, plot(t(1:end-1),Ia)
 xlim([6,9]), ylabel('muA/cm2'), xlabel('t (ms)'), legend('IK','INa','IA')
 
 !git add A_Current.m
-!git commit -m "A_Current"
+!git commit -m "Model of stellate cells of cerebellum."
 !git push
