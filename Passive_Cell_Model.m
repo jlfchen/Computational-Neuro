@@ -1,5 +1,5 @@
 % Modeling the passive isopotential cell
-% last edited: 5/21/20
+% Date uploaded: 5/21/20
 
 % (electrical/biological) cellular properties 
 r = 10; sa = (r*0.0001).^2*4*pi; % radius [µm], surface area [cm^2]
@@ -60,3 +60,7 @@ hold on, fplot(IC,'Linewidth',1)
 xlim auto
 axis([ti tf -10 Inf]), xlabel('t (ms)'), ylabel('I (pA)')
 legend({'Ileak (resistive)','IC (capacitive)'})
+
+!git add Passive_Cell_Model.m
+!git commit -m "Passive_Cell_Model"
+!git push
