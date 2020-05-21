@@ -2,11 +2,11 @@
 % Date uploaded: 5/21/20
 
 % (electrical/biological) cellular properties 
-r = 10; sa = (r*0.0001).^2*4*pi; % radius [Âµm], surface area [cm^2]
+r = 10; sa = (r*0.0001).^2*4*pi; % radius [µm], surface area [cm^2]
 disp("Surface Area: "+sa +" cm2") % assumption: spherical
 
-Cm = 1; % approximation of capacitance of biological membranes [ÂµF/cm2]
-C = Cm*sa; % capacitance [ÂµF]
+Cm = 1; % approximation of capacitance of biological membranes [µF/cm2]
+C = Cm*sa; % capacitance [µF]
 disp("Capacitance: "+ C +" ÂµF") 
 
 sleak = 0.3; % specific leak conductance [mS/cm2]
